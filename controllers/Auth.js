@@ -32,8 +32,7 @@ exports.sendotp = async (req, res) => {
     })
     const result = await OTP.findOne({ otp: otp })
     console.log("Result is Generate OTP Func")
-    console.log("OTP", otp)
-    console.log("Result", result)
+ 
     while (result) {
       otp = otpGenerator.generate(6, {
         upperCaseAlphabets: false,
@@ -45,7 +44,6 @@ exports.sendotp = async (req, res) => {
     res.status(200).json({
       success: true,
       message: `OTP Sent Successfully`,
-      otp,
     })
   } catch (error) {
     console.log(error.message)
