@@ -32,6 +32,12 @@ const userSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
+		token: {
+			type: String,
+		},
+		resetPasswordExpires: {
+			type: Date,
+		},
 
 	},
 	{ timestamps: true }  // Add timestamps for when the document is created and last modified

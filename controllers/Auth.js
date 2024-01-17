@@ -138,7 +138,6 @@ exports.signup = async (req, res) => {
     }
   }
 
-
 // Login controller for authenticating users
 exports.login = async (req, res) => {
     try {
