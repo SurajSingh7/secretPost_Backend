@@ -7,7 +7,7 @@ const { dbConnect } = require("./config/database");
 
 
 const userRoutes = require("./routes/User");
-const postRoutes=require("./routes/SecretePost");
+const workExperience = require("./routes/ExperienceRoute");
 
 const app = express();
 
@@ -34,7 +34,7 @@ app.use(
 
 //routes
 app.use("/api/v1/auth", userRoutes);
-app.use("/api/v1", postRoutes);
+app.use("/api/v1",workExperience);
 
 
 

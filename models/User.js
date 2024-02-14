@@ -3,12 +3,7 @@ const mongoose = require("mongoose");
 // Define the user schema using the Mongoose Schema 
 const userSchema = new mongoose.Schema(
 	{
-		firstName: {
-			type: String,
-			required: true,
-			trim: true,
-		},
-		lastName: {
+		name: {
 			type: String,
 			required: true,
 			trim: true,
@@ -18,15 +13,17 @@ const userSchema = new mongoose.Schema(
 			required: true,
 			trim: true,
 		},
+		phone: {
+			type: String,
+			required: true,
+			trim: true,
+		},
 		password: {
 			type: String,
 			required: true,
 		},
-		token: {
+		reEnterPassword: {
 			type: String,
-		},
-		resetPasswordExpires: {
-			type: Date,
 		},
 		image: {
 			type: String,
@@ -35,10 +32,6 @@ const userSchema = new mongoose.Schema(
 		token: {
 			type: String,
 		},
-		resetPasswordExpires: {
-			type: Date,
-		},
-
 	},
 	{ timestamps: true }  // Add timestamps for when the document is created and last modified
 );
